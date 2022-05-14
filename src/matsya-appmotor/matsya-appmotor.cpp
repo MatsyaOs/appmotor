@@ -17,7 +17,7 @@
 **
 ****************************************************************************/
 
-#include "cutefish-appmotor.h"
+#include "matsya-appmotor.h"
 #include "daemon.h"
 
 #include <unistd.h>
@@ -27,14 +27,14 @@
 #include <QApplication>
 #include <QDebug>
 
-const string CutefishBooster::m_boosterType = "cutefish";
+const string MatsyaBooster::m_boosterType = "matsya";
 
-const string & CutefishBooster::boosterType() const
+const string & MatsyaBooster::boosterType() const
 {
     return m_boosterType;
 }
 
-int CutefishBooster::launchProcess()
+int MatsyaBooster::launchProcess()
 {
     Booster::setEnvironmentBeforeLaunch();
 
@@ -58,14 +58,14 @@ int CutefishBooster::launchProcess()
     return EXIT_FAILURE;
 }
 
-void CutefishBooster::initialize(int initialArgc, char **initialArgv, int boosterLauncherSocket,
+void MatsyaBooster::initialize(int initialArgc, char **initialArgv, int boosterLauncherSocket,
                            int socketFd, SingleInstance *singleInstance, bool bootMode)
 {
     new QApplication(initialArgc, initialArgv);
     Booster::initialize(initialArgc, initialArgv, boosterLauncherSocket, socketFd, singleInstance, bootMode);
 }
 
-bool CutefishBooster::preload()
+bool MatsyaBooster::preload()
 {
     QQuickView window;
     window.create();
@@ -75,9 +75,8 @@ bool CutefishBooster::preload()
 
 int main(int argc, char **argv)
 {
-    CutefishBooster *booster = new CutefishBooster;
+    MatsyaBooster *booster = new MatsyaBooster;
 
     Daemon d(argc, argv);
     d.run(booster);
 }
-

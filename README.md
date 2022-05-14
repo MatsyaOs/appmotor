@@ -1,6 +1,6 @@
 # Cutefish AppMotor
 
-Optimize the speed of starting cutefish apps.
+Optimize the speed of starting matsya apps.
 
 ## Dependencies
 
@@ -45,7 +45,7 @@ commands.
 
 The user uses the launcher always through a special invoker program. The
 invoker (/usr/bin/invoker) tells booster process to load an application
-binary via a socket connection. 
+binary via a socket connection.
 
 The application to be launched via applauncherd should be compiled as a
 shared library or a position independent executable (-pie) and it should
@@ -66,7 +66,7 @@ other processes and therefore have to be done after forking. This allows,
 for instance, instantiating a application before knowing the
 name of the application. Then the booster process waits for a connection
 from the invoker with the information about which application should be
-launched. 
+launched.
 
 ## Contributors
 

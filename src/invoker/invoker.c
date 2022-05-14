@@ -438,14 +438,14 @@ static bool invoker_recv_exit(int fd, int* status)
     if (!res || (action != INVOKER_MSG_EXIT))
     {
         // Boosted application process was killed somehow.
-        // Let's give applauncherd process some time to cope 
+        // Let's give applauncherd process some time to cope
         // with this situation.
         sleep(2);
 
         // If nothing happend, return
         return false;
     }
-  
+
     // Receive exit status.
     res = invoke_recv_msg(fd, (uint32_t*) status);
     return res;
@@ -583,7 +583,7 @@ static void usage(int status)
            "launch anything. Possible values for TYPE:\n"
            "  qt5                    Launch a Qt 5 application.\n"
            "  qtquick2               Launch a Qt Quick 2 (QML) application.\n"
-           "  cutefish               Launch a Cutefish application.\n"
+           "  matsya               Launch a Matsya application.\n"
            "  generic                Launch any application, even if it's not a library.\n"
            "\n"
            "The TYPE may also be a comma delimited list of boosters to try. The first available\n"
@@ -615,14 +615,14 @@ static void usage(int status)
            "  -h, --help             Print this help.\n"
            "  -v, --verbose          Make invoker more verbose. Can be given several times.\n"
            "\n"
-           "Example: %s --type=cutefish /usr/bin/helloworld\n"
+           "Example: %s --type=matsya /usr/bin/helloworld\n"
            "\n",
            PROG_NAME_INVOKER, EXIT_DELAY, RESPAWN_DELAY, MAX_RESPAWN_DELAY, PROG_NAME_INVOKER);
 
     exit(status);
 }
 
-// Return delay as integer 
+// Return delay as integer
 static unsigned int get_delay(char *delay_arg, char *param_name,
                               unsigned int min_value, unsigned int max_value)
 {
@@ -642,7 +642,7 @@ static unsigned int get_delay(char *delay_arg, char *param_name,
             usage(1);
         }
     }
-    
+
     return delay;
 }
 
