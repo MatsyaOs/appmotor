@@ -1,0 +1,1 @@
+/usr/bin/cc  -W -Wall -Wextra -g -O3 CMakeFiles/matsya-invoker.dir/invokelib.c.o CMakeFiles/matsya-invoker.dir/invoker.c.o CMakeFiles/matsya-invoker.dir/__/common/report.c.o CMakeFiles/matsya-invoker.dir/search.c.o -o matsya-invoker  -ldbus-1 -lglib-2.0 

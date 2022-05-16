@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tokyo/Documents/GitHub/appmotor/src/common/report.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+ctype.h
+-
+errno.h
+-
+limits.h
+-
+report.h
+/home/tokyo/Documents/GitHub/appmotor/src/common/report.h
+
+/home/tokyo/Documents/GitHub/appmotor/src/common/report.h
+syslog.h
+-
+stdarg.h
+-
+

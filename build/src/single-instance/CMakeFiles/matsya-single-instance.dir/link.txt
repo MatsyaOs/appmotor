@@ -1,0 +1,1 @@
+/usr/bin/c++  -W -Wall -Wextra -g -O3 -Wl,--as-needed -fvisibility=hidden -fPIC -pie -rdynamic CMakeFiles/matsya-single-instance.dir/main.cpp.o CMakeFiles/matsya-single-instance.dir/__/common/report.c.o -o matsya-single-instance  -ldbus-1 
