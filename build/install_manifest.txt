@@ -1,0 +1,15 @@
+/usr/bin/matsya-invoker
+/usr/lib/libapplauncherd.so.SOVERSION
+/usr/lib/libapplauncherd.so
+/usr/include/applauncherd/appdata.h
+/usr/include/applauncherd/booster.h
+/usr/include/applauncherd/connection.h
+/usr/include/applauncherd/daemon.h
+/usr/include/applauncherd/logger.h
+/usr/include/applauncherd/launcherlib.h
+/usr/include/applauncherd/singleinstance.h
+/usr/include/applauncherd/socketmanager.h
+/usr/include/applauncherd/protocol.h
+/usr/bin/matsya-single-instance
+/usr/bin/matsya-appmotor
+/usr/lib/systemd/user/matsya-appmotor.service
